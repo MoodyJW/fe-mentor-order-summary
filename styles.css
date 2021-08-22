@@ -1,0 +1,219 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --body-font-size: 16px;
+  --light-weight: 500;
+  --med-weight: 700;
+  --heavy-weight: 900;
+  --border-radius: 0.8rem;
+  --max-width: 27.125rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url("./images/pattern-background-desktop.svg") no-repeat center
+    center fixed;
+  background-color: var(--pale-blue);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.main-container .card {
+  box-shadow: 0 20px 10px -10px var(--pale-blue);
+  background-color: white;
+  border-radius: var(--border-radius);
+  max-width: var(--max-width);
+  max-height: calc(80% - 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container .card .header-image {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  max-width: var(--max-width);
+}
+
+.main-container .card .card-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 20px 20px;
+}
+
+.main-container .card .card-content-container .order-summary {
+  padding: 30px 0 20px 0;
+}
+
+.main-container .card .card-content-container .order-summary h1 {
+  padding-bottom: 20px;
+  font-size: 28px;
+  font-weight: var(--heavy-weight);
+}
+
+.main-container .card .card-content-container .order-summary p {
+  color: var(--desaturated-blue);
+  padding: 0 15px;
+}
+
+.main-container .card .card-content-container .order-detail-box {
+  background-color: var(--very-pale-blue);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+}
+
+.main-container .card .card-content-container .order-detail-box .left-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: fit-content;
+  grid-gap: 15px;
+}
+
+.main-container .card .card-content-container .order-detail-box .left-grid p {
+  padding-top: 5px;
+  color: var(--desaturated-blue);
+}
+
+.main-container
+  .card
+  .card-content-container
+  .order-detail-box
+  .left-grid
+  p
+  .annual-plan {
+  color: black;
+  font-weight: var(--med-weight);
+  white-space: nowrap;
+}
+
+.main-container .card .card-content-container .order-detail-box .right-grid {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-container
+  .card
+  .card-content-container
+  .order-detail-box
+  .right-grid
+  .change-button {
+  border: none;
+  background: transparent;
+  color: var(--bright-blue);
+  font-weight: var(--heavy-weight);
+  text-decoration: underline;
+}
+
+.main-container
+  .card
+  .card-content-container
+  .order-detail-box
+  .right-grid
+  .change-button:hover {
+  cursor: pointer;
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+
+.main-container .card .card-content-container .actions-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+
+.main-container
+  .card
+  .card-content-container
+  .actions-container
+  .proceed-button {
+  border: none;
+  background-color: var(--bright-blue);
+  border-radius: var(--border-radius);
+  color: white;
+  font-weight: var(--med-weight);
+  height: 3rem;
+  box-shadow: 0 20px 20px -10px var(--desaturated-blue);
+}
+.main-container
+  .card
+  .card-content-container
+  .actions-container
+  .proceed-button:hover {
+  cursor: pointer;
+  background-color: var(--desaturated-blue);
+}
+
+.main-container
+  .card
+  .card-content-container
+  .actions-container
+  .cancel-button {
+  border: none;
+  background: transparent;
+  border-radius: var(--border-radius);
+  color: var(--desaturated-blue);
+  font-weight: var(--med-weight);
+  height: 3rem;
+  margin-top: 10px;
+}
+
+.main-container
+  .card
+  .card-content-container
+  .actions-container
+  .cancel-button:hover {
+  cursor: pointer;
+  color: var(--dark-blue);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media only screen and (max-width: 375px) {
+  :root {
+    --max-width: 21rem;
+  }
+
+  .main-container .card {
+    max-height: unset;
+  }
+
+  .main-container .card .card-content-container .actions-container {
+    padding: 0;
+  }
+}
