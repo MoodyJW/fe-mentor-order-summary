@@ -20,25 +20,23 @@
   padding: 0;
 }
 
-html {
-  background: url("../images/pattern-background-desktop.svg");
-  background-color: var(--pale-blue);
+body {
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 10px 0;
+  background: var(--pale-blue) url("../images/pattern-background-desktop.svg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100%;
-}
-
-body {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 16px;
-  text-align: center;
-  height: 100%;
 }
 
 .main-container {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -90,14 +88,13 @@ body {
   max-width: fit-content;
   grid-gap: 15px;
 }
-.main-container .card .card-content-container .order-detail-box .left-grid p {
+.main-container .card .card-content-container .order-detail-box .left-grid .plan-price .annual-plan {
+  white-space: nowrap;
+  font-size: 16px;
+}
+.main-container .card .card-content-container .order-detail-box .left-grid .plan-price p {
   padding-top: 5px;
   color: var(--desaturated-blue);
-}
-.main-container .card .card-content-container .order-detail-box .left-grid p .annual-plan {
-  color: black;
-  font-weight: var(--med-weight);
-  white-space: nowrap;
 }
 .main-container .card .card-content-container .order-detail-box .right-grid {
   display: flex;
@@ -153,10 +150,8 @@ body {
 }
 
 .attribution {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 425px) {
@@ -182,4 +177,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=css.map */
+/*# sourceMappingURL=css.css.map */
